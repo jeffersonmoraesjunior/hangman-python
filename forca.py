@@ -29,11 +29,12 @@ def game():
 
         tentativa = input("\nDigite uma letra: ").lower()
 
-        if tentativa in palavra:            
-            for index, letra in enumerate(palavra):
+        if tentativa in palavra:
+            index = 0
+            for letra in palavra:
                 if tentativa == letra:
                     letras_descobertas[index] = letra
-                    index += 1
+                index += 1
         else:
             chances -= 1
             letras_erradas.append(tentativa)
